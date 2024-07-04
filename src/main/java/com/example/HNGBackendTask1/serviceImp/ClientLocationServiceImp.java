@@ -23,8 +23,8 @@ private ClientWeather clientWeather;
     }
 
     @Override
-    public ApiResponse getClientLocationWeather(String username) {
-        String ipAddress= clientIp.getClient();
+    public ApiResponse getClientLocationWeather(String username, HttpServletRequest request) {
+        String ipAddress= clientIp.getClientIp(request);
         Location location= clientLocation.getUserLocation(ipAddress);
         double lat = location.getLat();
         double lon = location.getLon();

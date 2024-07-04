@@ -4,5 +4,5 @@ import com.example.HNGBackendTask1.pojo.ApiResponse;
 import jakarta.servlet.http.HttpServletRequest;
 
 public interface ClientLocationService {
-    ApiResponse getClientLocationWeather ( String username);
+    ApiResponse getClientLocationWeather ( String username, HttpServletRequest request);
 }

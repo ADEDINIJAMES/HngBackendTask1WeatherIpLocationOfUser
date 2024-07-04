@@ -19,7 +19,7 @@ public class ClientGreetingController {
         this.clientLocationService= clientLocationService;
     }
     @GetMapping("/")
-    public ResponseEntity<?> greetUser ( @RequestParam(name = "username") String username){
-   return ResponseEntity.ok( clientLocationService.getClientLocationWeather(username));
+    public ResponseEntity<?> greetUser ( @RequestParam(name = "username") String username, HttpServletRequest request){
+   return ResponseEntity.ok( clientLocationService.getClientLocationWeather(username, request));
     }
 }
