@@ -1,5 +1,8 @@
 package com.example.HNGBackendTask1.pojo;
 
+import lombok.Getter;
+
+@Getter
 public class ApiResponse {
     private String client_ip;
     private String location;
@@ -11,24 +14,12 @@ public class ApiResponse {
         this.greeting = greeting;
     }
 
-    public String getClient_ip() {
-        return client_ip;
-    }
-
     public void setClient_ip(String client_ip) {
         this.client_ip = client_ip;
     }
 
-    public String getLocation() {
-        return location;
-    }
-
     public void setLocation(String location) {
         this.location = location;
-    }
-
-    public String getGreeting() {
-        return greeting;
     }
 
     public void setGreeting(String greeting) {

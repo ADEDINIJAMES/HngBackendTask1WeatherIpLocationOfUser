@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/api")
 public class ClientGreetingController {
 
     private ClientLocationService clientLocationService;
@@ -18,8 +18,8 @@ public class ClientGreetingController {
     public ClientGreetingController(ClientLocationService clientLocationService){
         this.clientLocationService= clientLocationService;
     }
-    @GetMapping("/")
-    public ResponseEntity<?> greetUser ( @RequestParam(name = "username") String username, HttpServletRequest request){
+    @GetMapping("/hello")
+    public ResponseEntity<?> greetUser ( @RequestParam(name = "visitor_name") String username, HttpServletRequest request){
    return ResponseEntity.ok( clientLocationService.getClientLocationWeather(username, request));
     }
 }
