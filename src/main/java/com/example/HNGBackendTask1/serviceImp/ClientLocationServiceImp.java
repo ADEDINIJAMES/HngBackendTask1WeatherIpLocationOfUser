@@ -34,7 +34,7 @@ private ClientWeather clientWeather;
         ApiResponse apiResponse = new ApiResponse();
         apiResponse.setClient_ip(ipAddress);
         apiResponse.setLocation(location.getCity());
-        apiResponse.setGreeting("Hello, "+username+"!,"+" the temperature is "+Math.round(weather.getCurrent().getTemp_c())+" degree Celcius in "+location.getCity());
+        apiResponse.setGreeting("Hello, "+username+"!,"+" the temperature is "+weather.getCurrent().getTemp_c()+" degree Celcius in "+location.getCity());
 
 
         return apiResponse;
